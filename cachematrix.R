@@ -4,7 +4,8 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    mtrx <- NULL
+    
 }
 
 
@@ -17,5 +18,12 @@ cacheSolve <- function(x, ...) {
         ## github.  I will likely not have time to complete this assignment,
         ## but at least this way I will get partial credit.
     
-       ## have a nice day!
+       ## have a nice day
+    
+    if(!is.null(mtrx)){      ## if the matrix has already been inversed by makeCacheMatrix, return it
+        return(mtrx)
+    }
+    
+    invMatrix <- solve(x)   ##  else return the inversed matrix
+    
 }
